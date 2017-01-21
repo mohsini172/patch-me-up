@@ -1,0 +1,87 @@
+<html>
+<head>
+    <!-- skypeid: mohsiniammar
+        time spent: at least 12 successive hours
+        internet help: everything was created by my own even logic
+            -->
+	<title>Puzzle</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-1.12.1.min.js"></script>
+	<link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+	<script src="Bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        .shadow
+        {
+            box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+<body background="images/background.jpg" >
+    <div class="container">
+        <div style="background-color:#536dfe" class= "jumbotron" >
+            <h4  style="font-size:30;">Patch Me Up</h4>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-12">
+            <img class="shadow" src="images/parrot.jpg" style="width:100px;float:right;">
+            <p style="color:#FF5722;" id="score">Moves: 0</p>
+        </div>
+        <div class="col-lg-4 col-xl-4 col-md-5 col-sm-12 shadow" style="padding:5px;padding-left:50px;background-color:#EEEEEE;">
+            <div style = "display:inline-block;margin-top:3px;"> <img src="images/parrot 00.jpg" style="width:90px;" id="00" /> </div>
+            <div style = "display:inline-block;margin-top:3px;"> <img src="images/parrot 01.jpg" style="width:90px;" id="01" /> </div>
+            <div style = "display:inline-block;margin-top:3px;"> <img src="images/parrot 12.jpg" style="width:90px;" id="12" /> </div><br />
+            <div style = "display:inline-block;margin-top:3px;"> <img src="images/parrot 02.jpg" style="width:90px;" id="02" /> </div>
+            <div style = "display:inline-block;margin-top:3px;"> <img src="images/parrot 10.jpg" style="width:90px;" id="10" /> </div>
+            <div style = "display:inline-block;margin-top:3px;"> <img src="images/parrot 22.jpg" style="width:90px;" id="22" /> </div><br />
+            <div style = "display:inline-block;margin-top:3px;"> <img src="images/parrot 20.jpg" style="width:90px;" id="20" /> </div>
+            <div style = "display:inline-block;margin-top:3px;"> <img src="images/parrot 11.jpg" style="width:90px;" id="11" /> </div>
+            <div style = "display:inline-block;margin-top:3px;"> <img src="images/parrot 21.jpg" style="width:90px;" id="21" /> </div><br />
+        </div>
+    </div>
+    
+    <div class="modal fade" id="myModal" role="dialog" style="display: none;">
+    <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h1 class="modal-title">Congratulations</h1>
+            </div>
+            <div class="modal-body">
+                <div ><h1>You Patched Me!!!!</h1></div>
+                <div id="Moves"></div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="location.reload()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-repeat"></span></button>
+                <button type="button" class="btn btn-lg btn-success" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span></button>
+            </div>
+        </div>  
+    </div>
+  </div>
+    
+    <div class="modal fade" id="playDialog" role="dialog" style="display: none;">
+    <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:grey">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h1 class="modal-title">Menu</h1>
+            </div>
+            <div style="text-align:center;" class="modal-body">
+                <div ><h3>Click Play Button to start</h3></div>
+                <button style="width:200px;margin:5px;" class="btn btn-primary" data-dismiss="modal" onclick="setDiffculty(20)" >Child </button><br />
+                <button style="width:200px;margin:5px;" class="btn btn-success" data-dismiss="modal" onclick="setDiffculty(50)" >Easy  </button><br />
+                <button style="width:200px;margin:5px;" class="btn btn-info" data-dismiss="modal" onclick="setDiffculty(100)">Normal </button><br />
+                <button style="width:200px;margin:5px;" class="btn btn-warning" data-dismiss="modal" onclick="setDiffculty(500)">Hard  </button><br />
+                <button style="width:200px;margin:5px;" class="btn btn-danger" data-dismiss="modal" onclick="setDiffculty(1000)">Expert</button><br />
+            </div>
+            <br />
+        </div>  
+    </div>
+  </div>
+<script src="script.js" ></script>
+
+</body>
+</html>
